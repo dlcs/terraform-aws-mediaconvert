@@ -5,6 +5,7 @@ Modules for configuring AWS Elemental MediaConvert within wider DLCS.
 ## Modules
 
 * [presets](./presets/readme.md) - create presets required by Protagonist
+* [queue](./queue/readme.md) - create MediaConvert queue + associated resource for Protagonist.
 
 ## Changes
 
