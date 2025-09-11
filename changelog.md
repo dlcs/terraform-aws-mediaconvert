@@ -13,3 +13,7 @@ Initial commit of presets module, creating:
 Add queue module, queue has notifications:
 * COMPLETE/ERROR to SQS
 * All to Cloudwatch logs
+
+## 1.2
+
+Queue module outputs policy for using MediaConvert queue

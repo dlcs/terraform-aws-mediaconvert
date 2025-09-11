@@ -242,3 +242,66 @@ resource "aws_cloudwatch_event_target" "logging" {
   target_id = "${var.prefix}-mediaconvert-state-to-cloudwatch"
   arn       = aws_cloudwatch_log_group.logs.arn
 }
+
+# Policy for using queue
+data "aws_iam_policy_document" "use_mediaconvert" {
+  statement {
+    sid    = "GetQueue"
+    effect = "Allow"
+
+    actions = [
+      "mediaconvert:GetQueue",
+    ]
+
+    resources = [
+      aws_media_convert_queue.this.arn,
+    ]
+  }
+
+  statement {
+    sid    = "GetJob"
+    effect = "Allow"
+
+    actions = [
+      "mediaconvert:GetJob",
+    ]
+
+    resources = ["arn:aws:mediaconvert:*:${local.account_id}:jobs/*"]
+  }
+
+  statement {
+    sid    = "CreateJobAnyPreset"
+    effect = "Allow"
+
+    actions = [
+      "mediaconvert:CreateJob",
+    ]
+
+    resources = [
+      aws_media_convert_queue.this.arn,
+      "arn:aws:mediaconvert:*:${local.account_id}:presets/*"
+    ]
+  }
+
+  statement {
+    sid    = "PassRole"
+    effect = "Allow"
+
+    actions = [
+      "iam:PassRole",
+    ]
+
+    resources = [
+      aws_iam_role.mediaconvert.arn
+    ]
+
+    condition {
+      test     = "StringLike"
+      variable = "iam:PassedToService"
+
+      values = [
+        "mediaconvert.amazonaws.com",
+      ]
+    }
+  }
+}
