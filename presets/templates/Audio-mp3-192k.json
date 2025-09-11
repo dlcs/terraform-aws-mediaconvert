@@ -1,0 +1,22 @@
+{
+  "Description": "Audio MP3 - 192k",
+  "Category": "Protagonist",
+  "Name": "Audio_mp3_192k_44.1_CBR",
+  "Settings": {
+    "AudioDescriptions": [
+      {
+        "CodecSettings": {
+          "Codec": "MP3",
+          "Mp3Settings": {
+            "Bitrate": 192000,
+            "RateControlMode": "CBR",
+            "SampleRate": 44100
+          }
+        }
+      }
+    ],
+    "ContainerSettings": {
+      "Container": "RAW"
+    }
+  }
+}

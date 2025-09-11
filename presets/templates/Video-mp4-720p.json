@@ -1,0 +1,38 @@
+{
+  "Description": "Generic mp4 720p",
+  "Category": "Protagonist",
+  "Name": "Generic_Hd_Mp4_H264_Aac_1280x720p_29Hz_CBR_2949kbs",
+  "Settings": {
+    "VideoDescription": {
+      "Width": 1280,
+      "Height": 720,
+      "CodecSettings": {
+        "Codec": "H_264",
+        "H264Settings": {
+          "FramerateDenominator": 1001,
+          "Bitrate": 2949000,
+          "FramerateControl": "SPECIFIED",
+          "FramerateNumerator": 30000,
+          "QualityTuningLevel": "SINGLE_PASS_HQ",
+          "FramerateConversionAlgorithm": "DUPLICATE_DROP"
+        }
+      }
+    },
+    "AudioDescriptions": [
+      {
+        "CodecSettings": {
+          "Codec": "AAC",
+          "AacSettings": {
+            "Bitrate": 160000,
+            "CodingMode": "CODING_MODE_2_0",
+            "SampleRate": 48000
+          }
+        }
+      }
+    ],
+    "ContainerSettings": {
+      "Container": "MP4",
+      "Mp4Settings": {}
+    }
+  }
+}

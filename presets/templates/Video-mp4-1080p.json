@@ -1,0 +1,38 @@
+{
+  "Description": "Generic mp4 1080p",
+  "Category": "Protagonist",
+  "Name": "Generic_Hd_Mp4_H264_Aac_1920x1080p_29Hz_CBR_6732kbs",
+  "Settings": {
+    "VideoDescription": {
+      "Width": 1920,
+      "Height": 1080,
+      "CodecSettings": {
+        "Codec": "H_264",
+        "H264Settings": {
+          "FramerateDenominator": 1001,
+          "Bitrate": 6732000,
+          "FramerateControl": "SPECIFIED",
+          "FramerateNumerator": 30000,
+          "QualityTuningLevel": "SINGLE_PASS_HQ",
+          "FramerateConversionAlgorithm": "DUPLICATE_DROP"
+        }
+      }
+    },
+    "AudioDescriptions": [
+      {
+        "CodecSettings": {
+          "Codec": "AAC",
+          "AacSettings": {
+            "Bitrate": 160000,
+            "CodingMode": "CODING_MODE_2_0",
+            "SampleRate": 48000
+          }
+        }
+      }
+    ],
+    "ContainerSettings": {
+      "Container": "MP4",
+      "Mp4Settings": {}
+    }
+  }
+}

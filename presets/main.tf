@@ -1,0 +1,13 @@
+variable "revision" {
+  description = "Module revision, altering this will trigger script to be run"
+  default     = "1"
+}
+
+resource "terraform_data" "create_presets" {
+  input = var.revision
+
+  provisioner "local-exec" {
+    command     = "python upsert_presets.py"
+    working_dir = path.module
+  }
+}
