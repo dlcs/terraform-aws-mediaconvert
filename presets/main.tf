@@ -4,7 +4,8 @@ variable "revision" {
 }
 
 resource "terraform_data" "create_presets" {
-  input = var.revision
+  input            = var.revision
+  triggers_replace = var.revision
 
   provisioner "local-exec" {
     command     = "python upsert_presets.py"

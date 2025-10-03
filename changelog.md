@@ -17,3 +17,7 @@ Add queue module, queue has notifications:
 ## 1.2
 
 Queue module outputs policy for using MediaConvert queue
+
+## 1.3
+
+Use `triggers_replace` for presets module as `inputs` is not enough to re-run local-exec
