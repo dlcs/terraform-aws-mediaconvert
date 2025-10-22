@@ -1,19 +1,20 @@
 {
   "Description": "Generic mp4 1080p",
   "Category": "Protagonist",
-  "Name": "Generic_Hd_Mp4_H264_Aac_1920x1080p_29Hz_CBR_6732kbs",
+  "Name": "Generic_Hd_Mp4_H264_Aac_1920x1080p_29Hz_CBR_5400kbs",
   "Settings": {
     "VideoDescription": {
       "Width": 1920,
+      "ScalingBehavior": "FIT_NO_UPSCALE",
       "Height": 1080,
       "CodecSettings": {
         "Codec": "H_264",
         "H264Settings": {
           "FramerateDenominator": 1001,
-          "Bitrate": 6732000,
+          "Bitrate": 5400000,
           "FramerateControl": "SPECIFIED",
           "FramerateNumerator": 30000,
-          "QualityTuningLevel": "SINGLE_PASS_HQ",
+          "QualityTuningLevel": "SINGLE_PASS",
           "FramerateConversionAlgorithm": "DUPLICATE_DROP"
         }
       }
