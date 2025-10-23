@@ -25,3 +25,4 @@ The python script will iterate through every json file in the `./templates` dire
 > [!WARNING]
 > This script has limitations.
 > The expectation is that caller has `python` locally and boto3 installed.
+> For safety it won't delete any presets.

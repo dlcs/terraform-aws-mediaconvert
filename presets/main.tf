@@ -1,6 +1,6 @@
 variable "revision" {
   description = "Module revision, altering this will trigger script to be run"
-  default     = "1"
+  default     = "2"
 }
 
 resource "terraform_data" "create_presets" {
